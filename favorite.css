@@ -1,0 +1,76 @@
+.favorite-container {
+  margin: 50px auto;
+}
+
+.favorite-buttons {
+  margin: 40px auto;
+  font-size: 2rem;
+  display: flex;
+  width: 60vw;
+  justify-content: center;
+}
+
+.favorite-head {
+  display: block;
+  text-align: center;
+  padding: 1rem 1rem;
+  border-radius: 25px;
+  width: 100px;
+  margin: 0 50px;
+  cursor: pointer;
+  transition: background-color 200ms linear;
+}
+
+.favorite-head:hover {
+  background-color: #ebd2bc;;
+}
+
+input:nth-of-type(1),
+input:nth-of-type(2),
+input:nth-of-type(3)
+{
+  display: none;
+}
+
+input:nth-of-type(1) ~ div:nth-of-type(1),
+input:nth-of-type(2) ~ div:nth-of-type(2),
+input:nth-of-type(3) ~ div:nth-of-type(3)
+{
+  display: none;
+}
+input:nth-of-type(1):checked ~ div:nth-of-type(1),
+input:nth-of-type(2):checked ~ div:nth-of-type(2) 
+{
+  display: grid;
+}
+
+
+input:nth-of-type(3):checked ~ div:nth-of-type(3)
+{
+  display: flex;
+}
+
+.movie-container, .book-container {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  align-items: center;
+  justify-items: center;
+  grid-gap: 30px;
+}
+
+.music-container {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.music {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
