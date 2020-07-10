@@ -4,7 +4,8 @@
   "description": "demo about site",
   "scripts": {
     "dev": "gulp dev",
-    "build": "gulp build"
+    "build": "gulp build",
+    "update": "rm -rf node_modules; git pull origin master; npm install"
   },
   "author": "Dongho Kim",
   "license": "ISC",
