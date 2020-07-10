@@ -18,8 +18,8 @@ export const Slider = (() => {
   const initStyle = (width, height, numberOfSlides) => {
     sheet.add('.slider-wrap').set('display', 'flex').set('justify-content', 'center');
     sheet.add('.slider-button').set('display', 'inline-block').set('margin', 'auto 0');
-    sheet.add('.fas').set('color', 'rgba(0, 0, 0, 0.5').set('transition', 'color 100ms linear').set('font-size', '4rem').set('cursor', 'pointer');
-    sheet.add('.fas:hover').set('color', 'rgba(0, 0, 0, 1');
+    sheet.add('.slider-wrap .fas').set('color', 'rgba(0, 0, 0, 0.5').set('transition', 'color 100ms linear').set('font-size', '4rem').set('cursor', 'pointer');
+    sheet.add('.slider-wrap .fas:hover').set('color', 'rgba(0, 0, 0, 1');
     sheet.add('.slider-box').set('width', `${width}px`).set('height', `${height}px`).set('overflow', 'hidden').set('margin', '0 30px');
     sheet.add('.slider-list').set('width', `${width * (numberOfSlides + 2)}px`).set('height', `${height}`);
     sheet.add('.slider-content').set('float', 'left').set('width', `${width}px`).set('height', `${height}px`);
