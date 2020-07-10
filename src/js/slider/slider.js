@@ -26,6 +26,8 @@ export const Slider = (() => {
   }
 
   const initElement = (pElement, contents) => {
+    pElement = document.querySelector(pElement);
+
     const sliderWrap = document.createElement('div');
     sliderWrap.className = 'slider-wrap';
 
@@ -46,7 +48,6 @@ export const Slider = (() => {
     const prevBtnIcon = document.createElement('i');
     prevBtnIcon.className = 'fas fa-chevron-left';
     prevBtn.appendChild(prevBtnIcon);
-
 
     const nextBtnIcon = document.createElement('i');
     nextBtnIcon.className = 'fas fa-chevron-right';

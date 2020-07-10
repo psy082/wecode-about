@@ -43,7 +43,6 @@ export const hideHeader = (() => {
 
     const hasScrolled = _ => {
       const st = window.scrollY;
-      console.log(st);
 
       if (Math.abs(lastScrollTop - st) <= delta) return;
 
