@@ -71,3 +71,5 @@ const assets = gulp.series([styles, gulpWebpack]);
 const live = gulp.parallel([webserver, watch]);
 
 export const dev = gulp.series([prepare, assets, live]);
+
+export const build = gulp.series([prepare, assets]);
