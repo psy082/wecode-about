@@ -1,0 +1,136 @@
+@import "_reset";
+@import "_variables";
+
+body {
+  height: 200vh;
+  font-family: $bodyFont, sans-serif;
+  background: linear-gradient(135deg, #fce8d5, #ffd3e1);
+}
+
+header {
+  background: linear-gradient(to right, #7BA5D3, #7BA5D3 30%, #0a97b0);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: #{$headerHeight}px;
+  width: 100vw;
+  font-family: $headerFont, sans-serif;
+  border-radius: 0px 0px 25px 25px;
+  box-shadow: 0px -60px 100px 20px black;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+
+  .left-header,
+  .right-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .left-header {
+    margin: 0px 20px;
+  }
+
+  .right-header {
+    ul {
+      display: flex;
+
+      .nav-link {
+        margin: 0px 20px;
+        padding: 1rem 1rem;
+        border-radius: 25px;
+        transition: background-color 200ms linear;
+
+        &:hover {
+          background-color: #087b8f;
+        }
+
+        .link {
+          display: flex;
+          flex-direction: column;
+          font-size: 1.5rem;
+          color: white;
+
+          .logo {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contents {
+  position: relative;
+  top: #{$headerHeight}px;
+
+  .hr {
+    position: relative;
+    border: thin solid;
+    margin: 0 auto;
+    top: 150px;
+    width: 32rem;
+    color: black;
+  }
+}
+
+.typing-container {
+  position: absolute;
+  top: 6rem;
+  left: 50%;
+  padding: 0px 4rem;
+  transform: translate(-50%, 50%);
+  font-family: $typingFont, monospace;
+
+  .type-writing {
+    color: black;
+    width: 24em;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 1.8rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+  }
+
+  .anim-typewriter {
+    animation:
+      typewriter 2.5s steps(19) 1s 1 normal both,
+      blinkTextCursor 500ms steps(19) infinite normal;
+  }
+
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 20em;
+    }
+  }
+
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+      border-right-color: transparent;
+    }
+  }
+}
+
+footer {
+  background: #ffd3e1;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100vw;
+  height: #{$footerHeight}px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px 25px 0px 0px;
+  font-size: 1.5rem;
+  box-shadow: 0px 60px 90px 5px black;
+}
